@@ -1,0 +1,29 @@
+class Solution
+{
+    //Function to return the level order traversal of a tree.
+    static ArrayList <Integer> levelOrder(Node node) 
+    {
+        // Your code here
+        Queue<Node> q=new LinkedList<>();
+        
+        ArrayList <Integer> ans=new ArrayList <Integer>();
+        q.add(node);
+        
+        while(!q.isEmpty()){
+            Node temp=q.remove();
+            ans.add(temp.data);
+            if(temp.left!=null){
+                q.add(temp.left);
+            }
+            if(temp.right!=null){
+                q.add(temp.right);
+            }
+        }
+        
+        return ans;
+        
+    }
+}
+
+
+
