@@ -1,0 +1,30 @@
+class Solution {
+    // Function to get the maximum width of a binary tree.
+    int getMaxWidth(Node root) {
+        // Your code here
+        int width=-1;
+        Queue<Node> q=new LinkedList<>();
+        
+        q.add(root);
+        while(!q.isEmpty()){
+            int sz=q.size();
+            if(width<sz){
+                width=sz;
+            }
+            
+            while(sz-->0){
+                Node temp=q.remove();
+                if(temp.left!=null){
+                    q.add(temp.left);
+                }
+                if(temp.right!=null){
+                    q.add(temp.right);
+                }
+                
+            }
+        }
+        
+        return width;
+        
+    }
+}
