@@ -1,0 +1,17 @@
+
+class Solution{
+    public int digitsInFactorial(int N){
+        // code here
+        if(N==0||N==1){
+            return 1;
+        }
+        
+        double ans=0;
+        for(int i=1;i<=N;i++){
+            ans+=Math.log10(i);
+        }
+        
+        return (int)(Math.floor(ans)+1);
+        
+    }
+}
