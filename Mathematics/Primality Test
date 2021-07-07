@@ -1,0 +1,21 @@
+
+class Solution {
+    public boolean isPrime(int N) {
+      // code here
+      
+      if(N==2){
+          return true;
+      }
+      int i=2;
+      int temp=N;
+      while(i<=Math.sqrt(temp)){
+          
+          if(N%i==0){
+              return false;
+          }
+          i++;
+      }
+      
+      return true;
+    }
+}
