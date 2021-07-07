@@ -1,0 +1,13 @@
+
+class Solution
+{
+    static long multiplicationUnderModulo(long a, long b)
+    {
+        // add your code here
+        long m=(long)(Math.pow(10,9)+7);
+        return ((a% m)*(b%m)%m);
+        
+    }
+}
+
+
