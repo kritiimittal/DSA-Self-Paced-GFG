@@ -1,0 +1,18 @@
+
+class Solution {
+
+    public long factorial(int N) {
+        // Your code here
+        long ans=1;
+        if(N==0){
+            return 1;
+        }
+        
+        while(N!=0){
+            ans*=N;
+            N--;
+        }
+        
+        return ans;
+    }
+}
