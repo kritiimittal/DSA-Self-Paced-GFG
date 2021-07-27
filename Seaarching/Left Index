@@ -1,0 +1,18 @@
+
+class LeftIndex{ 
+
+    static int leftIndex(int N, int arr[], int X)
+    {
+       
+       // Your code here
+       int i=0;
+       while(i<N && arr[i]<=X){
+           if(arr[i]==X){
+               return i;
+           }
+           i++;
+       }
+       return -1;
+   
+    }
+}
